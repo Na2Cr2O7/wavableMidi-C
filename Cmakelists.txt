@@ -1,0 +1,41 @@
+# CMake 最低版本要求
+cmake_minimum_required(VERSION 3.16)
+
+# 项目名称与语言
+project(wavableMidiC LANGUAGES CXX)
+
+# 设置 C++ 标准：C++17
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_EXTENSIONS OFF)
+
+# 编译器警告设置（适用于 GCC, Clang, MinGW）
+if(CMAKE_CXX_COMPILER_ID MATCHES "GNU|Clang|AppleClang")
+    add_compile_options(
+        -Wall
+        -Wextra
+        -Wpedantic
+        -Wshadow
+        -Wunused-parameter
+    )
+endif()
+
+# Windows 上生成 .exe 后缀
+if(WIN32)
+    set(CMAKE_EXECUTABLE_SUFFIX ".exe")
+endif()
+
+# 查找当前目录所有 .cpp 文件（排除外部工具如 Binasc.cpp 如果不需要）
+file(GLOB SOURCES CONFIGURE_DEPENDS
+    "*.cpp"
+)
+
+
+# 输出包含当前目录，以便找到所有 .h 文件
+include_directories(${CMAKE_CURRENT_SOURCE_DIR})
+
+# 添加可执行文件
+add_executable(wavableMidiC ${SOURCES})
+
+# 可选：设置输出目录（编译产物放在 build/ 或 ./bin）
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR})
