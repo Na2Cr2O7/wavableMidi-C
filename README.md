@@ -1,3 +1,4 @@
+[![a](F2.png)](https://github.com/Na2Cr2O7/wavableMidi/blob/cecfdc8cdf85490c08c054685860950464f78b8c/F2.png)
 # 🎵 wavableMidi-C： MIDI 到 WAV 
 
 > 一个轻量、快速的 MIDI 音频渲染工具，利用 C++ 与外部 CLI 音频合成器完成端到端转换。
