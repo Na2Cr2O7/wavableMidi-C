@@ -1,3 +1,4 @@
+![a](https://github.com/Na2Cr2O7/wavableMidi/blob/cecfdc8cdf85490c08c054685860950464f78b8c/F2.png)
 # 🎵 wavableMidi-C：基于 C++ 的高效 MIDI 到 WAV 合成系统
 
 > 一个轻量、快速的 MIDI 音频渲染工具，利用 C++ 高性能处理与外部 CLI 音频合成器完成端到端转换。
@@ -122,3 +123,4 @@ g++ -std=c++17 \
 本项目采用 **GPL-3.0 License**，因依赖 `wavCompositorExtended`（GPL-3.0）且构成衍生使用。
 
 详见 [LICENSE](./LICENSE) 文件。
+
